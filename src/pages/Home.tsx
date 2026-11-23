@@ -3,13 +3,15 @@ import { lazy, Suspense } from "react";
 import Productions from "../components/home/Productions";
 import Filmography from "../components/home/Filmography";
 import Studio3DErrorBoundary from "../components/home/Studio3DErrorBoundary";
+import Reveal from "../components/ui/Reveal";
 
 const Studio3D = lazy(() => import("../components/home/Studio3D"));
 
 export default function Home() {
   return (
     <div id="accueil">
-      <section className="hero">
+      <Reveal>
+        <section className="hero">
         <div className="hero-content">
           <p className="eyebrow">
             CRÉER <span>•</span> RACONTER <span>•</span> ÉMOUVOIR
@@ -43,9 +45,15 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <Productions />
-      <Filmography />
-      <section className="about" id="apropos">
+      </Reveal>
+      <Reveal>
+        <Productions />
+      </Reveal>
+      <Reveal delay={0.15}>
+        <Filmography />
+      </Reveal>
+      <Reveal delay={0.3}>
+        <section className="about" id="apropos">
         <p className="eyebrow">QUI SOMMES-NOUS ?</p>
         <h2>
           Plus qu'une production,
@@ -60,6 +68,7 @@ export default function Home() {
           Parlons de votre projet →
         </a>
       </section>
+      </Reveal>
 
     </div>
   );

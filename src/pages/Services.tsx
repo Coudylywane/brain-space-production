@@ -8,6 +8,7 @@ import {
   Lightbulb,
   ArrowUpRight,
 } from "lucide-react";
+import Reveal from "../components/ui/Reveal";
 
 const services = [
   {
@@ -50,7 +51,8 @@ const services = [
 export default function Services() {
   return (
     <div className="services-page">
-      <section className="services-hero">
+      <Reveal>
+        <section className="services-hero">
         <p className="eyebrow">CE QUE NOUS FAISONS</p>
 
         <h1>
@@ -68,7 +70,9 @@ export default function Services() {
           Explorer nos services <ArrowUpRight size={18} />
         </a>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.1}>
       <section className="services-list" id="nos-services">
         <div className="services-heading">
           <div>
@@ -102,7 +106,9 @@ export default function Services() {
           })}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.2}>
       <section className="services-cta">
         <p className="eyebrow">UN PROJET EN TÊTE ?</p>
         <h2>Faisons-en une histoire.</h2>
@@ -115,6 +121,7 @@ export default function Services() {
           Demander un devis <ArrowUpRight size={18} />
         </Link>
       </section>
+      </Reveal>
 
     </div>
   );

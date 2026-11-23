@@ -6,6 +6,7 @@ import {
   Users,
   ArrowUpRight,
 } from "lucide-react";
+import Reveal from "../components/ui/Reveal";
 
 const activities = [
   {
@@ -41,7 +42,8 @@ const activities = [
 export default function About() {
   return (
     <div className="about-page">
-      <section className="about-hero">
+      <Reveal>
+        <section className="about-hero">
         <p className="eyebrow">QUI SOMMES-NOUS ?</p>
 
         <h1>
@@ -60,7 +62,9 @@ export default function About() {
           Découvrir notre vision <ArrowUpRight size={18} />
         </a>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.1}>
       <section className="about-vision" id="vision">
         <div>
           <p className="eyebrow">NOTRE VISION</p>
@@ -86,7 +90,9 @@ export default function About() {
           </p>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.2}>
       <section className="about-activities">
         <div className="section-heading">
           <p className="eyebrow">NOTRE SAVOIR-FAIRE</p>
@@ -112,7 +118,9 @@ export default function About() {
           })}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.3}>
       <section className="about-values">
         <p className="eyebrow">NOTRE ENGAGEMENT</p>
         <h2>Des idées, des images et des émotions.</h2>
@@ -122,7 +130,9 @@ export default function About() {
           idées et rapprocher les publics.
         </p>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.4}>
       <section className="about-team">
         <p className="eyebrow">LES VISAGES DE BRAIN SPACE</p>
         <h2>Une équipe à découvrir.</h2>
@@ -166,6 +176,7 @@ export default function About() {
           ))}
         </div>
       </section>
+      </Reveal>
 
     </div>
   );

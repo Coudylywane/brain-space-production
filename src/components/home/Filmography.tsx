@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Play, Calendar } from "lucide-react";
+import Reveal from "../ui/Reveal";
 
 const films = [
   {
@@ -59,8 +60,9 @@ export default function Filmography() {
       </div>
 
       <div className="filmography-grid">
-        {films.map((film) => (
-          <article className="film-card" key={film.title}>
+        {films.map((film, index) => (
+          <Reveal key={film.title} delay={index * 0.12}>
+            <article className="film-card">
             <div className="film-card-poster">
               <img src={film.poster} alt={`Affiche du film ${film.title}`} loading="lazy" />
             </div>
@@ -84,6 +86,7 @@ export default function Filmography() {
               </Link>
             </div>
           </article>
+          </Reveal>
         ))}
       </div>
     </section>

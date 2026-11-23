@@ -7,6 +7,7 @@ import {
   Megaphone,
   CalendarDays,
 } from "lucide-react";
+import Reveal from "../components/ui/Reveal";
 
 const news = [
   {
@@ -41,7 +42,8 @@ const news = [
 export default function News() {
   return (
     <div className="news-page">
-      <section className="news-hero">
+      <Reveal>
+        <section className="news-hero">
         <p className="eyebrow">LE JOURNAL DE BRAIN SPACE</p>
 
         <h1>
@@ -55,7 +57,9 @@ export default function News() {
           découvrez ce qui fait vivre Brain Space Production.
         </p>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.1}>
       <section className="news-content" id="actualites">
         <div className="news-heading">
           <div>
@@ -102,7 +106,9 @@ export default function News() {
           })}
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.2}>
       <section className="news-cta">
         <p className="eyebrow">RESTONS CONNECTÉS</p>
         <h2>Suivez notre univers créatif.</h2>
@@ -115,6 +121,7 @@ export default function News() {
           Nous contacter <ArrowUpRight size={18} />
         </Link>
       </section>
+      </Reveal>
 
     </div>
   );

@@ -1,10 +1,12 @@
 
 import { Play, Film } from "lucide-react";
+import Reveal from "../components/ui/Reveal";
 
 export default function ProjectDetails() {
   return (
     <div className="film-details">
-      <section className="film-hero">
+      <Reveal>
+        <section className="film-hero">
         <div className="film-hero-content">
           <p className="eyebrow">BRAIN SPACE PRODUCTION PRÉSENTE</p>
 
@@ -28,7 +30,9 @@ export default function ProjectDetails() {
           <p>VISUEL OFFICIEL À VENIR</p>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.1}>
       <section className="film-synopsis" id="synopsis">
         <p className="eyebrow">L'HISTOIRE</p>
         <h2>Trois destins. Un même défi.</h2>
@@ -49,7 +53,9 @@ export default function ProjectDetails() {
           Personne ne croit en eux. Pas même Mamadou.
         </p>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.2}>
       <section className="film-characters">
         <p className="eyebrow">LES PERSONNAGES</p>
         <h2>Trois parcours singuliers</h2>
@@ -74,7 +80,9 @@ export default function ProjectDetails() {
           </article>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.3}>
       <section className="film-trailer">
         <Play size={42} />
         <h2>Bientôt en images</h2>
@@ -83,6 +91,7 @@ export default function ProjectDetails() {
           seront bientôt disponibles.
         </p>
       </section>
+      </Reveal>
 
     </div>
   );

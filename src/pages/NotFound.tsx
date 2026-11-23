@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { Home } from "lucide-react";
+import Reveal from "../components/ui/Reveal";
 
 export default function NotFound() {
   return (
     <div className="not-found-page">
-      <section className="not-found-content">
+      <Reveal>
+        <section className="not-found-content">
         <p className="eyebrow">ERREUR 404</p>
         <h1>Cette page n'existe pas.</h1>
         <p>
@@ -16,6 +18,7 @@ export default function NotFound() {
           Retour à l'accueil
         </Link>
       </section>
+      </Reveal>
     </div>
   );
 }

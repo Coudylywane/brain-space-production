@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import Reveal from "../components/ui/Reveal";
 import {
   ArrowUpRight,
   Mail,
@@ -47,7 +48,8 @@ export default function Contact() {
 
   return (
     <div className="contact-page">
-      <section className="contact-hero">
+      <Reveal>
+        <section className="contact-hero">
         <p className="eyebrow">ENTRONS EN CONTACT</p>
 
         <h1>
@@ -61,7 +63,9 @@ export default function Contact() {
           Présentez-nous votre projet.
         </p>
       </section>
+      </Reveal>
 
+      <Reveal delay={0.1}>
       <section className="contact-content">
         <div className="contact-info">
           <p className="eyebrow">CONTACTEZ-NOUS</p>
@@ -205,6 +209,7 @@ export default function Contact() {
           )}
         </div>
       </section>
+      </Reveal>
 
     </div>
   );

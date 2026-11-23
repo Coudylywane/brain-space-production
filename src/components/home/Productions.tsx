@@ -1,6 +1,7 @@
 
 import { Film, Video, Music, Clapperboard, ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Reveal from "../ui/Reveal";
 
 const categories = [
   {
@@ -44,7 +45,8 @@ export default function Productions() {
         <span className="portfolio-count">01 — 04</span>
       </div>
 
-      <article className="featured-project">
+      <Reveal>
+        <article className="featured-project">
         <div className="project-artwork">
           <span className="project-tag">LONG MÉTRAGE DE FICTION</span>
           <div className="project-symbol">
@@ -75,13 +77,15 @@ export default function Productions() {
           </Link>
         </div>
       </article>
+      </Reveal>
 
       <div className="category-grid">
-        {categories.map((category) => {
+        {categories.map((category, index) => {
           const Icon = category.icon;
 
           return (
-            <article className="category-card" key={category.number}>
+            <Reveal key={category.number} delay={index * 0.12}>
+              <article className="category-card">
               <span className="category-number">
                 {category.number}
               </span>
@@ -90,6 +94,7 @@ export default function Productions() {
               <p>{category.description}</p>
               <ArrowUpRight className="category-arrow" />
             </article>
+            </Reveal>
           );
         })}
       </div>
