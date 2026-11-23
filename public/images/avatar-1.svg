@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" fill="#24080c"/>
+  <circle cx="60" cy="45" r="22" fill="#e50914"/>
+  <rect x="30" y="75" width="60" height="35" rx="17" fill="#4a1118"/>
+  <text x="50%" y="95%" text-anchor="middle" fill="#ffffff" font-size="10" font-family="Inter, sans-serif">MEMBRE 1</text>
+</svg>
